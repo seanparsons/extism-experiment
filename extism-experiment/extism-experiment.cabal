@@ -1,0 +1,18 @@
+cabal-version:      3.0
+name:               extism-experiment
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Sean Parsons
+maintainer:         git@futurenotfound.com
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable extism-experiment
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base, extism-pdk
+    hs-source-dirs:   app
+    default-language: Haskell2010

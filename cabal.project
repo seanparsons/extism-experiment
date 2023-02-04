@@ -1,0 +1,14 @@
+source-repository-package
+  type: git
+  location: https://github.com/extism/extism.git
+  subdir: haskell/manifest
+
+source-repository-package
+  type: git
+  location: https://github.com/extism/haskell-pdk.git
+
+package extism-experiment
+  ghc-options:
+    -optl -Wl,--export=hs_init -optl -Wl,--export=hs_exit -optl -Wl,--allow-undefined
+
+packages: ./extism-experiment
